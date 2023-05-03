@@ -29,3 +29,14 @@ jobs:
         commands: |
           cat /etc/os-release
           uname -a
+
+  build_nvidia_orin:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v3
+    - uses: ./ # pguyot/arm-runner-action@HEAD
+      with:
+        base_image: https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/sd_card_b49/jp511-orin-nano-sd-card-image.zip
+        commands: |
+          cat /etc/os-release
+          uname -a
