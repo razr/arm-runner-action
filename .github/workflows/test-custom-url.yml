@@ -45,6 +45,7 @@ jobs:
     - uses: ./ # pguyot/arm-runner-action@HEAD
       with:
         base_image: https://developer.nvidia.com/downloads/embedded/l4t/r35_release_v3.1/sd_card_b49/jp511-orin-nano-sd-card-image.zip
+        rootpartition: 1
         commands: |
           cat /etc/os-release
           uname -a
