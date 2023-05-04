@@ -69,7 +69,7 @@ tempdir=${RUNNER_TEMP:-/home/actions/temp}/arm-runner
 rm -rf ${tempdir}
 mkdir -p ${tempdir}
 cd ${tempdir}
-wget --trust-server-names --content-disposition -q --show-progress ${url}
+wget --trust-server-names --content-disposition -q ${url}
 case `echo *` in
     *.zip)
         unzip -u *
